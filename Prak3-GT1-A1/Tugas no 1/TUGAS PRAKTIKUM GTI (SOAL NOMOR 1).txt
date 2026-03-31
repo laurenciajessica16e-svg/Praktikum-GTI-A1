@@ -1,0 +1,25 @@
+﻿TUGAS PRAKTIKUM GTI (SOAL NOMOR 1)
+
+
+Nama        : Jessica Laurencia Panjaitan
+NIM        : 24060124130084
+Lab        : A1
+
+
+Ilustrasi cara kerja kode lengan
+1. Inisialisasi dan Variabel
+Program menggunakan dua variabel utama yaitu shoulder dan elbow untuk menyimpan sudut rotasi bahu dan siku. Nilai ini akan berubah melalui input keyboard. Fungsi init() digunakan untuk mengatur warna latar belakang dan mode shading, sedangkan reshape() mengatur tampilan perspektif agar objek terlihat 3D.
+2. Proses Menggambar dan Transformasi
+Pada fungsi display(), layar dibersihkan terlebih dahulu, lalu dilakukan serangkaian transformasi, yakni
+* Objek dipindahkan ke posisi bahu menggunakan glTranslatef
+* Diputar menggunakan glRotatef(shoulder) sehingga seluruh lengan ikut berputar
+* Lengan atas digambar dari kubus yang diskalakan menjadi persegi panjang
+* Kemudian berpindah ke posisi siku, dilakukan rotasi kedua menggunakan elbow
+* Lengan bawah digambar dengan cara yang sama
+Transformasi ini bersifat berurutan (hierarkis), sehingga gerakan siku mengikuti bahu seperti lengan manusia.
+3. Interaksi dan Pergerakan
+Fungsi keyboard() digunakan untuk mengontrol gerakan,yakni 
+* Tombol s / S untuk memutar bahu
+* Tombol e / E untuk memutar siku
+* Setiap perubahan sudut akan memanggil glutPostRedisplay() agar tampilan diperbarui
+Hasilnya, lengan robot dapat bergerak secara dinamis sesuai input pengguna dengan simulasi gerakan yang realistis.
