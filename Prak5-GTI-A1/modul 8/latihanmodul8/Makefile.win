@@ -1,0 +1,52 @@
+# Project: Project3
+# Makefile created by Dev-C++ 5.7.1
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = "../INFORMATIKA/SEMESTER\ 4/tubesGTI/chef.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/customer.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/globals.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/items.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/kitchen.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/maintubes.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/material.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/stove.o" "../INFORMATIKA/SEMESTER\ 4/tubesGTI/utils.o"
+LINKOBJ  = "../INFORMATIKA/SEMESTER 4/tubesGTI/chef.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/customer.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/globals.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/items.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/kitchen.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/maintubes.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/material.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/stove.o" "../INFORMATIKA/SEMESTER 4/tubesGTI/utils.o"
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/lib" -static-libstdc++ -static-libgcc -lglut32 -lopengl32 -lglu32
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW32/lib/gcc/mingw32/4.8.1/include/c++"
+BIN      = TUBESGTI.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/chef.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/chef.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/chef.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/chef.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/customer.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/customer.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/customer.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/customer.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/globals.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/globals.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/globals.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/globals.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/items.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/items.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/items.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/items.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/kitchen.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/kitchen.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/kitchen.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/kitchen.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/maintubes.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/maintubes.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/maintubes.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/maintubes.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/material.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/material.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/material.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/material.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/stove.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/stove.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/stove.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/stove.o" $(CXXFLAGS)
+
+"../INFORMATIKA/SEMESTER\ 4/tubesGTI/utils.o": ../INFORMATIKA/SEMESTER\ 4/tubesGTI/utils.cpp
+	$(CPP) -c "../INFORMATIKA/SEMESTER 4/tubesGTI/utils.cpp" -o "../INFORMATIKA/SEMESTER 4/tubesGTI/utils.o" $(CXXFLAGS)
